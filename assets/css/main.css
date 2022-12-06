@@ -1,0 +1,20 @@
+@import url('navbar.css');
+@import url('main-content.css');
+@import url('text-converted.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-remove:before, .fa-close:before, .fa-times:before {
+    content: "\f00d";
+    position: absolute;
+    top: 121px;
+    right: 10ppx;
+    right: 15px;
+    color: #fff;
+    font-size: 1.7em;
+}

@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container-content{
+    padding: 30px;
+  
+}
+
+.container-content h2{
+    font-size: 1.7em;
+}
+
+.container-content p{
+    margin-top: 12px;
+    font-size: 1.2em;
+}
+
+#press-to-talk{
+    padding: 16px;
+    margin-top: 15px;
+    width: 100%;
+    border: none;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9em;
+}

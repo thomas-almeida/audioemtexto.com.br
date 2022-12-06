@@ -1,0 +1,40 @@
+.text-converted {
+    display: none;
+    justify-content: flex-end;
+    align-items: end;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+    background: #0000007a;
+}
+
+.text-converted-content {
+    background: #fff;
+    height: 70vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.text-converted-content p{
+    margin: 20px;
+    margin-top: 30px;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.text-converted-content button{
+    margin: 20px;
+    padding: 15px;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    width: 200px;
+    border: none;
+    color: #fff;
+}
+
+#hidden-input {
+    border: none;
+    color: #fff;
+    width: 0px;
+}
