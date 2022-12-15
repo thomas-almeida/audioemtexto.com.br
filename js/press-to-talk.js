@@ -31,12 +31,15 @@ function copyTextFunc() {
 
     copyText.innerText = 'Copiado ✔'
 
-
 }
 
 function startListen() {
 
+    if (!recognition) return;
+
     if (listenPointer == 0) {
+
+        recognition.start()
 
         pressToTalkBtn.style.background = '#fff'
         pressToTalkBtn.style.border = '3px solid crimson'
@@ -51,6 +54,8 @@ function startListen() {
         textConvertedDiv.style.display = 'flex'
         hiddenInput.value = textResultP.innerText
 
+        recognition.stop()
+
         pressToTalkBtn.style.background = 'dodgerblue'
         pressToTalkBtn.style.border = 'none'
         pressToTalkBtn.style.color = '#fff'
@@ -59,5 +64,26 @@ function startListen() {
         listenPointer = 0
 
     }
+
+}
+
+const recognition = createRecognition()
+
+function createRecognition() {
+
+    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+
+    if (!recognition) {
+        alert("speech not found")
+        return
+    }
+
+    recognition.lang = "pt_BR"
+    recognition.onstart = () => console.log('started')
+    recognition.onend = () => console.log('finish')
+    recognition.onerror = e => console.log('error', e)
+    recognition.onresult = e => textResultP.innerHTML = e.results[0][0].transcript
+
+    return recognition
 
 }
